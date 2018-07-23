@@ -1,13 +1,14 @@
 ---
-title: "Make笔记"
+title: "Makefile笔记"
 date: 2018-07-20T13:00:46+08:00
+lastmod: 2018-07-23 10:18:06
 tags: ["makefile"]
 draft: false
 categories: ["linux"]
 
 
 ---
-##命名##
+## 命名
 文件保存以`Makefile`或`makefile`为名.当在当前目录下直接输入`make`即可执行
 
 如果不是默认的文件名, 可以使用`-f`参数
@@ -15,8 +16,8 @@ categories: ["linux"]
 make -f make.some
 ```
 
-##变量##
-###变量基本用法
+## 变量
+### 变量基本用法
 
 - 变量以`=`赋值
 左侧是变量, 右侧是变量的值
@@ -66,7 +67,7 @@ make 运行时的系统环境变量可以在 make 开始运行时被载入到 Ma
 Makefile 中定义的变量
 
 
-###变量高级用法###
+### 变量高级用法
 - 变量值的替换
 替换变量中的共有部分, 格式为`$(var:a=b)`或者`${var:a=b}`, 把var中所有以结尾的字串替换成以b结尾
 如下
@@ -84,8 +85,8 @@ a := $($(x))
 ```
 如上, \$(x)的值是y, \$(\$(x))就是\$(y), 那\$(a)就是z
 
-##依赖规则##
-###规则语法###
+## 依赖规则
+### 规则语法
 ```
 targets : prerequisites
     command
@@ -99,7 +100,7 @@ targets : prerequisites ; command
 
 prerequisites是目标所依赖的文件(或者依赖目标), 如果有一个以上的文件比 target 文件要新的话,command 所定义的命令就会被执行
 
-###伪目标###
+### 伪目标
 伪目标的规则类似上面的规则, 但是伪目标不是文件, 只是一个标签, 所以make无法生成它的依赖关系和决定它是否执行, 只有通过显示指定这个目标才能让其生效.
 比如, `make clean`科学可以执行下面的命令.
 ```
@@ -140,14 +141,14 @@ Makefile中的第一目标会被当做默认目标. `all`伪目标依赖于其�
 
 如上, `make cleanall`, `make cleanobj`都可以显示伪目标执行命令
 
-###多目标###
+### 多目标
 Makefile的规则中的目标可以不止一个,  其支持多目标. 当让, 有自动化变量`$@`吧表示目标的集合, 依次取出目标, 并执行命令.如下
 ```
 bigoutput littleoutput : text.g
 generate text.g $@ > $@
 ```
 
-###静态模式定义的多目标###
+### 静态模式定义的多目标
 语法如下
 ```
 <targets...> : <target-pattern> : <prereq-pattern>
@@ -170,7 +171,7 @@ $(CC) -c $< -o $@
 
 
 
-###规则中使用通配符###
+### 规则中使用通配符
 同bash一样, 支持三种通配符
 |符号|意义|
 |:---:|:---|
@@ -181,15 +182,15 @@ $(CC) -c $< -o $@
 |[^]|反向选择. 例如, [^abc]非a,b,c外的其他的任意一个字符|
 
 
-##文件搜索##
-###VPATH(大写)变量指定搜索目录###
+## 文件搜索
+### VPATH(大写)变量指定搜索目录
 make默认在当前目录搜索文件, 然后再到`VPATH`指定的目录去搜索.
 ```
 VPATH = src:../headers
 ```
 上面的定义指定两个目录,, 用`:`分割,  "src"和"../headers", make按照这个顺序进行搜索, 当然, 当前目录是最高优先级.
 
-###vpath(小写)关键字设定搜索规则和路径###
+### vpath(小写)关键字设定搜索规则和路径
 三种使用方法
 - vpath &lt;pattern&gt; &lt;directories&gt;
 为符合模式&lt;patern&gt;的文件指定搜索目录&lt;directories&gt;
@@ -208,7 +209,7 @@ vpath % blish
 ```
 上面的语句表示`.c`结尾的文件, 依次搜索"foo", "bar", "user", "blish"目录
 
-##条件判断##
+## 条件判断
 `ifeq` 条件语句开始, `else`条件表达式为假, `endif`表示一个条件语句的结束.
 
 - `ifeq`, 比较参数arg1和arg2是否相同,相同则为真
@@ -219,15 +220,15 @@ ifeq '<arg1>' "<arg2>"
 ifeq "<arg1>" '<arg2>'
 ```
 
-- 'ifneq`是否相同, 不同则为真
+- `ifneq`是否相同, 不同则为真
 - `ifdef <variable-name>`判断变量的值非空, 则为真.只是测量变量是否有值, 并不会把变量扩展到当前位置
 
-##函数##
+## 函数
 函数调用以`$`开头, 以圆括号或花括号把函数名和参数括起.参数以`,`分隔, 函数名和参数之间以空格分隔;
 ```
 $(<function> <arguments1,arguments2>) #小括号可换为大括号
 ```
-####常用的字符串处理函数####
+### 常用的字符串处理函数
 - `$(subst <from>,<to>,<text>)`
 把子串&lt;text&gt;中的&lt;from&gt;字符串替换为&lt;to&gt;, 返回替换后的子串
 
@@ -246,7 +247,7 @@ $(<function> <arguments1,arguments2>) #小括号可换为大括号
 
 
 
-##特定字符##
+## 特定字符
 
 `-`放在命令前, 无论出现什么错误, 继续执行
 
@@ -255,10 +256,10 @@ $(<function> <arguments1,arguments2>) #小括号可换为大括号
 
 命令以[Tab]键开始
 
-`\`换行符, 类似c语言, 表示连接上一行
+`\` 换行符, 类似c语言, 表示连接上一行
 
 
-##Makefile与vim##
+## Makefile与vim
 vim内置了`autocmd`, 所以可以使用`:make`, make当前目录`:pwd`下的Makefile
 ```
 :make           #执行当前目录下的Makefile
@@ -272,7 +273,7 @@ Use the following commands to examine the compile errors with vim
 ```
 具体用法, 可以在vim下`:h copen`和`:h cnext`
 
-##Makefile经验总结##
+## Makefile经验总结
 - 整个Makefile文件都不要使用空格键最为安全，你看到的所有空格其实是有Tab键产生的，一旦使用了空格键，文件是默认空格是编译语言的其中一部分，从而会导致错误的出现。包括在编写注释的时候，也不要用空格
 - 使用`-l`连接库模块时，不要直接写文件名，要把文件名中开头的lib去掉。例如，源文件是libopencv_core.so,在连接时使用-lopencv_core.
 - 多个连接模块，使用空格分开。

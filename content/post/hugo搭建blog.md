@@ -1,9 +1,11 @@
 ---
 title: "Hugo搭建blog"
 date: 2018-07-20T12:10:44+08:00
+lastmod: 2018-07-23 10:14:14
 tags: ["hugo"]
 draft: false
 categories: ["blog"]
+author: ""
 
 ---
 ## Hugo quick start
