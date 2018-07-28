@@ -15,31 +15,34 @@ install:
     - pwd
 
 script:
-    - hugo -d blog
+    - hugo
     - echo 'Hugo build done!'
 after_success:
     - git config --global user.email "qfq61@qq.com"
-    - git config --global user.name "QFQ"
-    - git clone https://$GithubToken@github.com/tainzhi/tainzhi.github.io.git container
-    - rm -rf container/blog
-    - cp -r blog container 
-    - cd container
+    - git config --global user.name "QFQ"gi
+    # Gihub pages
+    - rm github-pages
+    - git clone https://${GithubToken}@${Github_REF} github-pages
+    - rm github-pages/* -rf
+    - cp public github-pages -rf
+    - cd github-pages
     - ls
     - git add .
     - git commit -m 'Travis upate blog'
-    - git push -u origin master
-    # Github Pages
-    - git push --force --quiet "https://${CodingNetToken}@${Github_REF}" master:master 
-    # Coding Pages
-    - git push --force --quiet "https://tainzhi:${CodingNetToken}@${CodingNetToken}" master:master
-    - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-    # Github Pages
-    - git push --quiet "https://${CodingNetToken}@${Github_REF}" master:master --tags
-    # Coding Pages
-    - git push --quiet "https://tainzhi:${CodingNetToken}@${CodingNetToken}" master:master --tags
+    - git push --force --quiet https://${CodingNetToken}@${Github_REF} master:master 
+    - cd ..
+    # Coding.net pages
+    - rm coding-pages
+    - git clone https://${CodingNetToken}@{CodingNet_REF} coding-pages
+    - cp public coding-pages
+    - cd coding-pages
+    - ls
+    - git add .
+    - git commit -m 'Travis update'
+    - git push --force --quiet https://${CodingNetToken}@${CodingNet_REF} master:master
 env:
  global:
    # Github Pages
-   - Github_REF: github.com/tainzhi/tainzhi.github.io
+   - Github_REF: github.com/tainzhi/tainzhi.github.io.git
    # Coding Pages
    - CodingNet_REF: git.coding.net/qfq/qfq.coding.me.git
