@@ -26,6 +26,7 @@ after_success:
     - rm github-pages/* -rf
     - cp public github-pages -rf
     - cd github-pages
+    - pwd
     - ls
     - git add .
     - git commit -m 'Travis upate blog'
