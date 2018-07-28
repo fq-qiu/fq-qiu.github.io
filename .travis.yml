@@ -42,6 +42,7 @@ after_success:
     - git add .
     - git commit -m 'Travis update'
     - git push --force --quiet "https://${CodingNetToken}@${CodingNet_REF}" master:master
+
 env:
  global:
    # Github Pages
