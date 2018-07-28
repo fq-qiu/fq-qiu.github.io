@@ -1,6 +1,6 @@
 baseURL = "http://qfq.coding.me"
-languageCode = "en"
-defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "QFQ的博客"
 enableRobotsTXT = true
 enableEmoji = true
@@ -10,7 +10,7 @@ preserveTaxonomyNames = true
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 5                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
-googleAnalytics = ""      # UA-XXXXXXXX-X
+googleAnalytics = "UA-122485224-1"      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
@@ -43,8 +43,6 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   url = "/categories/"
 
 [params]
-  publicDir = "QFQ"
-
   version = "3.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 
@@ -59,7 +57,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   archivePaginate = 5
 
   # show 'xx Posts In Total' in archive page ?            # 是否在归档页显示文章的总数
-  showArchiveCount = false
+  showArchiveCount = true
 
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
   dateFormatToUse = "2006-01-02"
@@ -84,9 +82,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   changyanAppkey = ""       # Changyan app key
   livereUID = ""            # LiveRe UID                  # 来必力
   baidu_push = true        # baidu push                  # 百度
-  baidu_analytics = ""      # Baidu Analytics
-  baidu_verification = "s8Pe1TBqyy"   # Baidu Verification
-  google_verification = "fNO906OBok1KPg3j_d5IDaHKN-M1MFEldzqW53hQ98E"  # Google_Verification         # 谷歌
+  baidu_analytics = "b640efe02c0f246246019dbd09d35a86"      # Baidu Analytics
+  baidu_verification = "s8Pe1TBqyy"   # Baidu Verification, for http://qfq.coding.me
+  google_verification = "Mds1Bl3bztUHFVhTKV2fA3TJJjWSDM3S_2j4Igv8G90"  # Google_Verification         # 谷歌, for https://tainzhi.github.io
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
@@ -114,10 +112,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     warn = 180              # Display warning if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示警告
 
   [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+    owner = "tainzhi"              # Your GitHub ID
+    repo = "tainzhi.github.io"               # The repo to store comments
+    clientId = "787f218ec49a286fa9e0"           # Your client ID
+    clientSecret = "97d3a6646c5b508dc2a2eae1b5bcfde455289e14"       # Your client secret
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
     owner = ""              # Your GitHub ID
@@ -171,7 +169,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
  isHTML = false
 
 [outputs]
- home = ["HTML", "RSS"]
+ home = ["HTML", "RSS", "JSON"]
  page = ["HTML", "MarkDown"]
  section = ["HTML", "RSS"]
  taxonomy = ["HTML", "RSS"]
