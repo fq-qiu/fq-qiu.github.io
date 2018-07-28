@@ -18,19 +18,20 @@ script:
     - hugo
     - echo 'Hugo build done!'
 after_success:
+    - echo `pwd`
     - git config --global user.email "qfq61@qq.com"
-    - git config --global user.name "QFQ"gi
+    - git config --global user.name "QFQ"
     # Gihub pages
     - rm github-pages
     - git clone https://${GithubToken}@${Github_REF} github-pages
     - rm github-pages/* -rf
     - cp public github-pages -rf
     - cd github-pages
-    - pwd
+    - echo `pwd`
     - ls
     - git add .
     - git commit -m 'Travis upate blog'
-    - git push --force --quiet https://${CodingNetToken}@${Github_REF} master:master 
+    - git push --force --quiet https://${GithubToken}@${Github_REF} master:master 
     - cd ..
     # Coding.net pages
     - rm coding-pages
