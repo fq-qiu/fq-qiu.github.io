@@ -31,12 +31,12 @@ after_success:
     # Github Pages
     - git push --force --quiet "https://${CodingNetToken}@${Github_REF}" master:master 
     # Coding Pages
-    - git push --force --quiet "https://qinyuanpei:${CodingNetToken}@${CodingNetToken}" master:master
+    - git push --force --quiet "https://tainzhi:${CodingNetToken}@${CodingNetToken}" master:master
     - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
     # Github Pages
     - git push --quiet "https://${CodingNetToken}@${Github_REF}" master:master --tags
     # Coding Pages
-    - git push --quiet "https://qinyuanpei:${CodingNetToken}@${CodingNetToken}" master:master --tags
+    - git push --quiet "https://tainzhi:${CodingNetToken}@${CodingNetToken}" master:master --tags
 env:
  global:
    # Github Pages
