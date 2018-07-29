@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on QFQ的博客</title>
+    <link>http://qfq.coding.me/categories/</link>
+    <description>Recent content in Categories on QFQ的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Jul 2018 13:03:45 +0800</lastBuildDate>
+    
+	<atom:link href="http://qfq.coding.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>http://qfq.coding.me/categories/android/</link>
+      <pubDate>Fri, 20 Jul 2018 13:03:45 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>http://qfq.coding.me/categories/blog/</link>
+      <pubDate>Fri, 20 Jul 2018 12:10:44 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://qfq.coding.me/categories/git/</link>
+      <pubDate>Fri, 20 Jul 2018 13:03:50 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://qfq.coding.me/categories/linux/</link>
+      <pubDate>Fri, 20 Jul 2018 13:00:46 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://qfq.coding.me/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://qfq.coding.me/about/</loc>
+    <lastmod>2018-07-29T07:32:22+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</loc>
+    <lastmod>2018-07-20T13:03:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/makefile-note/</loc>
+    <lastmod>2018-07-23T10:18:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
+    <lastmod>2018-07-20T12:50:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BAblog/</loc>
+    <lastmod>2018-07-28T14:33:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/categories/android/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/android/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/app/</loc>
+    <lastmod>2018-07-20T12:50:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/categories/blog/</loc>
+    <lastmod>2018-07-28T14:33:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/categories/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/ffmpeg/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/categories/git/</loc>
+    <lastmod>2018-07-20T13:03:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/git/</loc>
+    <lastmod>2018-07-20T13:03:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/hugo/</loc>
+    <lastmod>2018-07-28T14:33:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/categories/linux/</loc>
+    <lastmod>2018-07-23T10:18:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/makefile/</loc>
+    <lastmod>2018-07-23T10:18:06+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/post/</loc>
+    <lastmod>2018-07-20T13:03:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/</loc>
+    <lastmod>2018-07-29T07:32:22+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qfq.coding.me/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/</loc>
+    <lastmod>2018-07-20T13:03:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
