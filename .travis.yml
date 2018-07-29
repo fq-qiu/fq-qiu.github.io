@@ -19,7 +19,8 @@ script:
     - echo 'Hugo build done!'
 after_script:
   - git clone "https://qfq:${CodingNetToken}@${CodingNet_REF}" coding-pages
-  - cp ./public coding-pages -rf
+  - rm coding-pages/public -rf
+  - cp ./public/* coding-pages -rf
   - cd coding-pages
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
