@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2018-07-29T10:15:08+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</loc>
     <lastmod>2018-07-20T13:03:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -123,7 +130,7 @@
   
   <url>
     <loc>http://qfq.coding.me/post/</loc>
-    <lastmod>2018-07-20T13:03:50+08:00</lastmod>
+    <lastmod>2018-07-29T10:15:08+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
