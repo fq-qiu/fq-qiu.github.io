@@ -19,9 +19,8 @@ script:
     - echo 'Hugo build done!'
 after_script:
   - git clone "https://qfq:${CodingNetToken}@${CodingNet_REF}" coding-pages
-  - rm coding-pages/public -rf
+  - cp ./public coding-pages -rf
   - cd coding-pages
-  - cp ../public coding-pages -rf
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
