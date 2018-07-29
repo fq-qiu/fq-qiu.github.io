@@ -18,32 +18,20 @@ script:
     - hugo
     - echo 'Hugo build done!'
 after_success:
-    - echo 'begin to upload blogs'
-    - echo `pwd`
-    - git config --global user.email "qfq61@qq.com"
-    - git config --global user.name "QFQ"
-    # Gihub pages
-    - rm github-pages
-    - git clone https://${Github_REF} github-pages
-    - rm github-pages/* -rf
-    - cp public github-pages -rf
-    - cd github-pages
-    - echo `pwd`
-    - ls
-    - git add .
-    - git commit -m 'Travis upate blog'
-    - git push --force --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master 
-    - cd ..
-    # Coding.net pages
-    - rm coding-pages
-    - git clone https://${CodingNet_REF} coding-pages
-    - rm coding-pages/* -rf
-    - cp public coding-pages
-    - cd coding-pages
-    - ls
-    - git add .
-    - git commit -m 'Travis update'
-    - git push --force --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master
+  - cd ./public
+  - git init
+  - git config user.name "QFQ"
+  - git config user.email "qfq61@qq.com"
+  - git add .
+  - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Github Pages
+  - git push --force --quiet "https://${GithubToken}@${Github_REF}" master:master 
+  - git push --quiet "https://${CodingNetToken}@${CodingNet_REF}" master:master --tags
+  # Coding Pages
+  - git push --force --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master
+  - git push --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master --tags
+  # Github Pages
 
 env:
  global:
