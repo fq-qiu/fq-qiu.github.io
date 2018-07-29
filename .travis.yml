@@ -24,7 +24,7 @@ after_success:
     - git config --global user.name "QFQ"
     # Gihub pages
     - rm github-pages
-    - git clone "https://tainzhi:${GithubToken}@${Github_REF}" github-pages
+    - git clone "https://${Github_REF}" github-pages
     - rm github-pages/* -rf
     - cp public github-pages -rf
     - cd github-pages
@@ -36,7 +36,8 @@ after_success:
     - cd ..
     # Coding.net pages
     - rm coding-pages
-    - git clone "https://qfq:${CodingNetToken}@{CodingNet_REF}" coding-pages
+    - git clone "https://${CodingNet_REF}" coding-pages
+    - rm coding-pages/* -rf
     - cp public coding-pages
     - cd coding-pages
     - ls
