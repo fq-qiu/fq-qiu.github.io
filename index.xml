@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>远程服务器个性化配置</title>
+      <link>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 29 Jul 2018 10:14:31 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</guid>
+      <description>写在前面 我们在开发中经常需要临时使用服务器，服务器没有个性化配置，使用起来很不方面，比如最常见的vim配置，bashrc配置都是默认的。仿佛</description>
+    </item>
+    
+    <item>
       <title>git hooks防止把个人密码信息上传到github</title>
       <link>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</link>
       <pubDate>Fri, 20 Jul 2018 13:03:50 +0800</pubDate>
