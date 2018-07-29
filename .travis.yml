@@ -1,16 +1,11 @@
 # https://docs.travis-ci.com/user/deployment/pages/
 # https://docs.travis-ci.com/user/languages/python/
-language: python
-
-python:
-    - "3.6"
 
 install:
     - uname -a
     - wget https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_0.45.1_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
     - hugo version
-    - rm -rf blog
     - ls
     - pwd
 
@@ -18,10 +13,10 @@ script:
     - hugo
     - echo 'Hugo build done!'
 after_script:
-  - git clone "https://qfq:${CodingNetToken}@${CodingNet_REF}" coding-pages
-  - rm coding-pages/public -rf
-  - cp ./public/* coding-pages -rf
-  - cd coding-pages
+  - git clone "https://tainzhi:${GithubNetToken}@${GithubNet_REF}" github-pages
+  - rm github-pages/public -rf
+  - cp ./public/* github-pages -rf
+  - cd github-pages
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
