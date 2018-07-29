@@ -20,14 +20,14 @@ script:
 after_success:
   - cd ./public
   - git init
-  - git config user.name "QFQ"
+  - git config user.name "tainzhi"
   - git config user.email "qfq61@qq.com"
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
-  - git push --force --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master 
-  - git push --quiet "https://tainzhi:${GithubToken}@${GithubToken}" master:master --tags
+  - git push --force --quiet "https://${GithubToken}@${Github_REF}" master:master 
+  - git push --quiet "https://${GithubToken}@${Github_REF}" master:master --tags
   # Coding Pages
   - git push --force --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master
   - git push --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master --tags
