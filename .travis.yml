@@ -24,13 +24,13 @@ after_script:
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-    # Github Pages
-    - git push --force --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master 
-    - git push --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master --tags
-    # Coding Pages
+  # Github Pages
+  - git push --force --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master 
+  - git push --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master --tags
+  # Coding Pages
   - git push --force --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master
   - git push --quiet "https://qfq:${CodingNetToken}@${CodingNet_REF}" master:master --tags
-    cd ../
+  - cd ../
 # deploy:
   # local_dir: public # Default static site output dir for Hugo
   # repo: tainzhi/tainzhi.github.io # This is the slug of the repo you want to deploy your site to
