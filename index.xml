@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QFQ的博客</title>
+    <link>http://qfq.coding.me/</link>
+    <description>Recent content on QFQ的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    
+	<atom:link href="http://qfq.coding.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://qfq.coding.me/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/about/</guid>
+      <description>This is QFQ&amp;rsquo;s blog. [Todo] 完善我的个人信息</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages</title>
+      <link>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</link>
+      <pubDate>Sun, 29 Jul 2018 16:05:50 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</guid>
+      <description>写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署</description>
+    </item>
+    
+    <item>
+      <title>远程服务器个性化配置</title>
+      <link>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 29 Jul 2018 10:14:31 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</guid>
+      <description>写在前面 我们在开发中经常需要临时使用服务器，服务器没有个性化配置，使用起来很不方面，比如最常见的vim配置，bashrc配置都是默认的。仿佛</description>
+    </item>
+    
+    <item>
+      <title>git hooks防止把个人密码信息上传到github</title>
+      <link>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</link>
+      <pubDate>Fri, 20 Jul 2018 13:03:50 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;In most projects, hooks are in &lt;code&gt;.git/hooks&lt;/code&gt;. The hooks are some scripts written in Ruby or Python or Shell or whatever language you are familiar with. If you want to use the bundled hook scripts, you&amp;rsquo;ll have to rename them without file extentions &lt;code&gt;.sample&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two kind of hooks, client-side hooks and server-side hooks.&lt;/p&gt;
+
+&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android使用ffmpeg</title>
+      <link>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</link>
+      <pubDate>Fri, 20 Jul 2018 13:03:45 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</guid>
+      <description>ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一</description>
+    </item>
+    
+    <item>
+      <title>Makefile笔记</title>
+      <link>http://qfq.coding.me/post/makefile-note/</link>
+      <pubDate>Fri, 20 Jul 2018 13:00:46 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/makefile-note/</guid>
+      <description>命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量</description>
+    </item>
+    
+    <item>
+      <title>我的android视频播放器</title>
+      <link>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
+      <pubDate>Fri, 20 Jul 2018 12:50:32 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
+      <description>写在前面 好久没有写博客了, 中间忙了一堆杂七杂八的事情&amp;hellip;工作, 情感, 未来, 人生&amp;hellip; 下面是正文 一直要写一个视频播放器,</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建blog&lt;一&gt;</title>
+      <link>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</link>
+      <pubDate>Fri, 20 Jul 2018 12:10:44 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</guid>
+      <description>我之前的静态博客生成器用过jekyll(基于ruby), pelican(基于python)和hexo(基于node.js)，到现在用hugo</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on QFQ的博客</title>
+    <link>http://qfq.coding.me/categories/linux/</link>
+    <description>Recent content in Linux on QFQ的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Jul 2018 10:14:31 +0800</lastBuildDate>
+    
+	<atom:link href="http://qfq.coding.me/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>远程服务器个性化配置</title>
+      <link>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 29 Jul 2018 10:14:31 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</guid>
+      <description>写在前面 我们在开发中经常需要临时使用服务器，服务器没有个性化配置，使用起来很不方面，比如最常见的vim配置，bashrc配置都是默认的。仿佛</description>
+    </item>
+    
+    <item>
+      <title>Makefile笔记</title>
+      <link>http://qfq.coding.me/post/makefile-note/</link>
+      <pubDate>Fri, 20 Jul 2018 13:00:46 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/post/makefile-note/</guid>
+      <description>命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量</description>
+    </item>
+    
+  </channel>
+</rss>
