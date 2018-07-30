@@ -60,7 +60,7 @@
 
 <meta property="article:published_time" content="2018-07-29T16:05:50&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-07-30T08:01:35&#43;00:00"/>
+<meta property="article:modified_time" content="2018-07-30T08:10:24&#43;00:00"/>
 
 
 
@@ -229,7 +229,7 @@ script:
     - hugo
     - echo 'Hugo build done!'
 after_script:
-  - git clone &quot;https://tainzhi:${GithubNetToken}@${GithubNet_REF}&quot; github-pages
+  - git clone &quot;https://tainzhi:${GithubToken}@${Github_REF}&quot; github-pages
   - rm github-pages/public -rf
   - cp ./public/* github-pages -rf
   - cd github-pages
