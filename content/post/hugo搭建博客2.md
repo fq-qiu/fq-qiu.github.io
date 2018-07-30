@@ -1,7 +1,7 @@
 ---
 title: "Hugo搭建博客<二>:使用Travis.ci自动部署到github pages和coding.net pages"
 date: 2018-07-29T16:05:50+08:00
-lastmod: 2018-07-30 07:53:02
+lastmod: 2018-07-30 08:01:35
 tags: ["hugo"]
 draft: false
 categories: ["blog"]
@@ -49,6 +49,9 @@ after_script:
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Github Pages
+  - git push --force --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master 
+  - git push --quiet "https://tainzhi:${GithubToken}@${Github_REF}" master:master --tags
 
 env:
  global:
