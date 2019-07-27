@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on QFQ的博客</title>
+    <title>android on QFQ的博客</title>
     <link>http://qfq.coding.me/tags/android/</link>
-    <description>Recent content in Android on QFQ的博客</description>
+    <description>Recent content in android on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 20 Jul 2018 13:03:45 +0800</lastBuildDate>

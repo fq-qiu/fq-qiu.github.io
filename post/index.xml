@@ -41,9 +41,7 @@
 
 &lt;p&gt;There are two kind of hooks, client-side hooks and server-side hooks.&lt;/p&gt;
 
-&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;</description>
     </item>
     
     <item>

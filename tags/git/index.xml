@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on QFQ的博客</title>
+    <title>git on QFQ的博客</title>
     <link>http://qfq.coding.me/tags/git/</link>
-    <description>Recent content in Git on QFQ的博客</description>
+    <description>Recent content in git on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 20 Jul 2018 13:03:50 +0800</lastBuildDate>
@@ -23,9 +23,7 @@
 
 &lt;p&gt;There are two kind of hooks, client-side hooks and server-side hooks.&lt;/p&gt;
 
-&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;</description>
     </item>
     
   </channel>

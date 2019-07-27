@@ -6,7 +6,7 @@
     <description>Recent content on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jul 2019 23:37:04 +0800</lastBuildDate>
     
 	<atom:link href="http://qfq.coding.me/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>http://qfq.coding.me/about/</guid>
       <description>This is QFQ&amp;rsquo;s blog. [Todo] 完善我的个人信息</description>
+    </item>
+    
+    <item>
+      <title>About_vim</title>
+      <link>http://qfq.coding.me/posts/about_vim/</link>
+      <pubDate>Sat, 27 Jul 2019 23:37:04 +0800</pubDate>
+      
+      <guid>http://qfq.coding.me/posts/about_vim/</guid>
+      <description>简单谈谈vim使用过程的坑和爽点 vim使用有几年了，从最开始不会使用各种懵逼，到输入第一个字符，再到能简单的插入删除复制粘贴，再到自定义一些</description>
     </item>
     
     <item>
@@ -50,9 +59,7 @@
 
 &lt;p&gt;There are two kind of hooks, client-side hooks and server-side hooks.&lt;/p&gt;
 
-&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Here, I just focus on &lt;code&gt;pre-commit&lt;/code&gt; on client-side.&lt;/p&gt;</description>
     </item>
     
     <item>

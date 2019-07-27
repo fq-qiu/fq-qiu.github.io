@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on QFQ的博客</title>
+    <title>linux on QFQ的博客</title>
     <link>http://qfq.coding.me/categories/linux/</link>
-    <description>Recent content in Linux on QFQ的博客</description>
+    <description>Recent content in linux on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 29 Jul 2018 10:14:31 +0800</lastBuildDate>
