@@ -1,11 +1,13 @@
 ## 写在前面
-使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有[Travis.ci]( https://www.travis-ci.org/ )，一个自动测试和部署工具网站，你只需要把hugo处理前的文件上传到github，Travis.ci就会自动通过Hugo生成静态博客内容，并上传到pages的对应仓库。
+使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有[Travis.ci]( https://www.travis-ci.org/ )，一个自动测试和部署工具网站，你只需要把hugo处理前的文件上传到github，Travis.ci就会自动通过Hugo生成静态博客内容，并上传到pages的对应仓库。
 需求有3个
+
 - 1 保存博客内容的github上仓库hugo-blog
 - 2 用户对应的github-pages的对应仓库 user.github.io，我的是tainzhi.github.io
 - 3 Travis.ci上设置的hugo-blog与tainzhi.github.io的对应trigger
 
 具体流程如下：
+
 - 1 本地编写博客，并上传到github仓库hugo-blog
 - 2 因为Travis.ci对hugo-blog设置了trigger，它检测到hugo-blog有推送，就执行一系列操作，生成静态博客内容，把内容推送到github上pages对应的仓库tainzhi.github.io
 - 3 在浏览器中输入`https://tainzhi.github.io`就可浏览到新博客
@@ -22,10 +24,9 @@
 
 install:
     - uname -a
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_0.45.1_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.56.0/hugo_0.56.0_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
     - hugo version
-    - ls
     - pwd
 
 script:

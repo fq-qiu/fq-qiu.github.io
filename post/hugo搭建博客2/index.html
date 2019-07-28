@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="tainzhi" /><meta name="description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署" />
+<meta name="author" content="tainzhi" /><meta name="description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages" />
-<meta property="og:description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署" />
+<meta property="og:description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/" />
 <meta property="article:published_time" content="2018-07-29T16:05:50+08:00" />
-<meta property="article:modified_time" content="2018-07-30T08:10:24+00:00" />
+<meta property="article:modified_time" content="2019-07-28T13:39:45+00:00" />
 <meta itemprop="name" content="Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages">
-<meta itemprop="description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署">
+<meta itemprop="description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署">
 
 
 <meta itemprop="datePublished" content="2018-07-29T16:05:50&#43;08:00" />
-<meta itemprop="dateModified" content="2018-07-30T08:10:24&#43;00:00" />
-<meta itemprop="wordCount" content="1076">
+<meta itemprop="dateModified" content="2019-07-28T13:39:45&#43;00:00" />
+<meta itemprop="wordCount" content="1067">
 
 
 
 <meta itemprop="keywords" content="hugo," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages"/>
-<meta name="twitter:description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署"/>
+<meta name="twitter:description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/blog/"> blog </a>
             </div>
-          <span class="more-meta"> 约 1076 字 </span>
+          <span class="more-meta"> 约 1067 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -153,26 +153,27 @@
 </nav>
   </div>
 </div>
-  <div class="post-outdated">
-    <div class="hint">
-      <p>【注意】最后更新于 <span class="timeago" datetime="2018-07-30T08:10:24" title="July 30, 2018">July 30, 2018</span>，文中内容可能已过时，请谨慎使用。</p>
-    </div>
-  </div>
     <div class="post-content">
       
 
 <h2 id="写在前面">写在前面</h2>
 
-<p>使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有<a href="https://www.travis-ci.org/">Travis.ci</a>，一个自动测试和部署工具网站，你只需要把hugo处理前的文件上传到github，Travis.ci就会自动通过Hugo生成静态博客内容，并上传到pages的对应仓库。
-需求有3个
-- 1 保存博客内容的github上仓库hugo-blog
-- 2 用户对应的github-pages的对应仓库 user.github.io，我的是tainzhi.github.io
-- 3 Travis.ci上设置的hugo-blog与tainzhi.github.io的对应trigger</p>
+<p>使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有<a href="https://www.travis-ci.org/">Travis.ci</a>，一个自动测试和部署工具网站，你只需要把hugo处理前的文件上传到github，Travis.ci就会自动通过Hugo生成静态博客内容，并上传到pages的对应仓库。
+需求有3个</p>
 
-<p>具体流程如下：
-- 1 本地编写博客，并上传到github仓库hugo-blog
-- 2 因为Travis.ci对hugo-blog设置了trigger，它检测到hugo-blog有推送，就执行一系列操作，生成静态博客内容，把内容推送到github上pages对应的仓库tainzhi.github.io
-- 3 在浏览器中输入<code>https://tainzhi.github.io</code>就可浏览到新博客</p>
+<ul>
+<li>1 保存博客内容的github上仓库hugo-blog</li>
+<li>2 用户对应的github-pages的对应仓库 user.github.io，我的是tainzhi.github.io</li>
+<li>3 Travis.ci上设置的hugo-blog与tainzhi.github.io的对应trigger</li>
+</ul>
+
+<p>具体流程如下：</p>
+
+<ul>
+<li>1 本地编写博客，并上传到github仓库hugo-blog</li>
+<li>2 因为Travis.ci对hugo-blog设置了trigger，它检测到hugo-blog有推送，就执行一系列操作，生成静态博客内容，把内容推送到github上pages对应的仓库tainzhi.github.io</li>
+<li>3 在浏览器中输入<code>https://tainzhi.github.io</code>就可浏览到新博客</li>
+</ul>
 
 <h2 id="travis-ci注册与使用">Travis.ci注册与使用</h2>
 
@@ -212,7 +213,6 @@
 </span><span class="lnt">27
 </span><span class="lnt">28
 </span><span class="lnt">29
-</span><span class="lnt">30
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma"># https://docs.travis-ci.com/user/deployment/pages/
@@ -220,10 +220,9 @@
 
 install:
     - uname -a
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_0.45.1_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.56.0/hugo_0.56.0_Linux-64bit.deb
     - sudo dpkg -i hugo*.deb
     - hugo version
-    - ls
     - pwd
 
 script:
@@ -283,7 +282,7 @@ env:
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2018-07-30
+        2019-07-28
         
     </span>
   </p>
@@ -320,7 +319,7 @@ env:
         id: '2018-07-29 16:05:50 \x2b0800 \x2b0800',
         title: 'Hugo搭建博客\x3c二\x3e:使用Travis.ci自动部署到github pages和coding.net pages',
         link: decodeURI(location.href),
-        desc: '写在前面 使用Hugo生成静态博客后，需要手动把内容长传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署',
+        desc: '写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署',
         owner: 'tainzhi',
         repo: 'tainzhi.github.io',
         oauth: {
