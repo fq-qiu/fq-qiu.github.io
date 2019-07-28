@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>makefile on QFQ的博客</title>
-    <link>http://qfq.coding.me/tags/makefile/</link>
+    <link>https://tainzhi.github.io/tags/makefile/</link>
     <description>Recent content in makefile on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_cn</language>
     <lastBuildDate>Fri, 20 Jul 2018 13:00:46 +0800</lastBuildDate>
     
-	<atom:link href="http://qfq.coding.me/tags/makefile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tainzhi.github.io/tags/makefile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Makefile笔记</title>
-      <link>http://qfq.coding.me/post/makefile-note/</link>
+      <link>https://tainzhi.github.io/post/makefile-note/</link>
       <pubDate>Fri, 20 Jul 2018 13:00:46 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/post/makefile-note/</guid>
-      <description>命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量</description>
+      <guid>https://tainzhi.github.io/post/makefile-note/</guid>
+      <description>命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变</description>
     </item>
     
   </channel>

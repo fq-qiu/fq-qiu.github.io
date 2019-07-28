@@ -1,179 +1,172 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="https://tainzhi.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://qfq.coding.me/about/</loc>
+    <loc>https://tainzhi.github.io/about/</loc>
     <lastmod>2018-07-29T07:32:22+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/posts/about_vim/</loc>
+    <loc>https://tainzhi.github.io/post/about_vim/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/categories/</loc>
+    <loc>https://tainzhi.github.io/categories/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/posts/</loc>
+    <loc>https://tainzhi.github.io/post/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/</loc>
+    <loc>https://tainzhi.github.io/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/</loc>
+    <loc>https://tainzhi.github.io/tags/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/categories/vim/</loc>
+    <loc>https://tainzhi.github.io/categories/vim/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/vim/</loc>
+    <loc>https://tainzhi.github.io/tags/vim/</loc>
     <lastmod>2019-07-28T05:01:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</loc>
+    <loc>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</loc>
     <lastmod>2018-07-30T08:10:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/</loc>
+    <loc>https://tainzhi.github.io/categories/blog/</loc>
     <lastmod>2018-07-30T08:10:24+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/categories/blog/</loc>
+    <loc>https://tainzhi.github.io/tags/hugo/</loc>
     <lastmod>2018-07-30T08:10:24+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/hugo/</loc>
-    <lastmod>2018-07-30T08:10:24+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://qfq.coding.me/categories/linux/</loc>
+    <loc>https://tainzhi.github.io/categories/linux/</loc>
     <lastmod>2018-07-29T10:44:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/linux/</loc>
+    <loc>https://tainzhi.github.io/tags/linux/</loc>
     <lastmod>2018-07-29T10:44:35+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://tainzhi.github.io/post/%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2018-07-29T10:44:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/categories/git/</loc>
+    <loc>https://tainzhi.github.io/categories/git/</loc>
     <lastmod>2018-07-20T13:03:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/git/</loc>
+    <loc>https://tainzhi.github.io/tags/git/</loc>
     <lastmod>2018-07-20T13:03:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</loc>
+    <loc>https://tainzhi.github.io/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/</loc>
     <lastmod>2018-07-20T13:03:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</loc>
+    <loc>https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/categories/android/</loc>
+    <loc>https://tainzhi.github.io/categories/android/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/android/</loc>
+    <loc>https://tainzhi.github.io/tags/android/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/ffmpeg/</loc>
+    <loc>https://tainzhi.github.io/tags/ffmpeg/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/</loc>
+    <loc>https://tainzhi.github.io/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/makefile-note/</loc>
+    <loc>https://tainzhi.github.io/post/makefile-note/</loc>
     <lastmod>2018-07-23T10:18:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/makefile/</loc>
+    <loc>https://tainzhi.github.io/tags/makefile/</loc>
     <lastmod>2018-07-23T10:18:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/tags/app/</loc>
+    <loc>https://tainzhi.github.io/tags/app/</loc>
     <lastmod>2018-07-20T12:50:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
+    <loc>https://tainzhi.github.io/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
     <lastmod>2018-07-20T12:50:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://qfq.coding.me/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</loc>
+    <loc>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</loc>
     <lastmod>2018-07-30T08:10:24+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

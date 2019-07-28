@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>app on QFQ的博客</title>
-    <link>http://qfq.coding.me/tags/app/</link>
+    <link>https://tainzhi.github.io/tags/app/</link>
     <description>Recent content in app on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_cn</language>
     <lastBuildDate>Fri, 20 Jul 2018 12:50:32 +0800</lastBuildDate>
     
-	<atom:link href="http://qfq.coding.me/tags/app/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tainzhi.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我的android视频播放器</title>
-      <link>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
+      <link>https://tainzhi.github.io/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
       <pubDate>Fri, 20 Jul 2018 12:50:32 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
+      <guid>https://tainzhi.github.io/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
       <description>写在前面 好久没有写博客了, 中间忙了一堆杂七杂八的事情&amp;hellip;工作, 情感, 未来, 人生&amp;hellip; 下面是正文 一直要写一个视频播放器,</description>
     </item>
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh_cn">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,76 +16,48 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="QFQ" />
-  <meta name="description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="tainzhi" /><meta name="description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变" />
 
 
-<meta name="baidu-site-verification" content="s8Pe1TBqyy" />
-<meta name="google-site-verification" content="Mds1Bl3bztUHFVhTKV2fA3TJJjWSDM3S_2j4Igv8G90" />
 
 
-<meta name="generator" content="Hugo 0.45.1" />
 
 
-<link rel="canonical" href="http://qfq.coding.me/post/makefile-note/" />
+<meta name="generator" content="Hugo 0.56.0 with even 4.0.0" />
 
+
+<link rel="canonical" href="https://tainzhi.github.io/post/makefile-note/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#2b5797">
-<meta name="theme-color" content="#ffffff">
 
-
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Makefile笔记" />
-<meta property="og:description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量" />
+<meta property="og:description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://qfq.coding.me/post/makefile-note/" />
-
-
-
-<meta property="article:published_time" content="2018-07-20T13:00:46&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-07-23T10:18:06&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://tainzhi.github.io/post/makefile-note/" />
+<meta property="article:published_time" content="2018-07-20T13:00:46+08:00" />
+<meta property="article:modified_time" content="2018-07-23T10:18:06+00:00" />
 <meta itemprop="name" content="Makefile笔记">
-<meta itemprop="description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量">
+<meta itemprop="description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变">
 
 
 <meta itemprop="datePublished" content="2018-07-20T13:00:46&#43;08:00" />
-<meta itemprop="dateModified" content="2018-07-20T13:00:46&#43;08:00" />
-<meta itemprop="wordCount" content="3210">
+<meta itemprop="dateModified" content="2018-07-23T10:18:06&#43;00:00" />
+<meta itemprop="wordCount" content="3270">
 
 
 
 <meta itemprop="keywords" content="makefile," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Makefile笔记"/>
-<meta name="twitter:description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量"/>
+<meta name="twitter:description" content="命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -157,20 +129,16 @@
       <div class="post-meta">
         <span class="post-time"> 2018-07-20 </span>
         <div class="post-category">
-            
-              <a href="/categories/linux/"> linux </a>
-            
-          </div>
-        
-        
+            <a href="/categories/linux/"> linux </a>
+            </div>
+          <span class="more-meta">  </span>
+          <span class="more-meta">  </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> %!(EXTRA string=<span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
@@ -208,11 +176,11 @@
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
+  <div class="post-outdated">
+    <div class="hint">
+      <p><span class="timeago" datetime="2018-07-23T10:18:06" title="July 23, 2018">July 23, 2018</span></p>
+    </div>
+  </div>
     <div class="post-content">
       
 
@@ -221,10 +189,14 @@
 <p>文件保存以<code>Makefile</code>或<code>makefile</code>为名.当在当前目录下直接输入<code>make</code>即可执行</p>
 
 <p>如果不是默认的文件名, 可以使用<code>-f</code>参数</p>
-
-<pre><code>make -f make.some
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">make -f make.some</pre></td></tr></table>
+</div>
+</div>
 <h2 id="变量">变量</h2>
 
 <h3 id="变量基本用法">变量基本用法</h3>
@@ -232,16 +204,25 @@
 <ul>
 <li><p>变量以<code>=</code>赋值
 左侧是变量, 右侧是变量的值</p>
-
-<pre><code>objects = main.o kbd.o command.o display.o \
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">objects = main.o kbd.o command.o display.o \</pre></td></tr></table>
+</div>
+</div>
 <p>也可以使用变量来构造变量</p>
-
-<pre><code>A = $(B)
-B = $(A)
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">A = $(B)
+B = $(A)</pre></td></tr></table>
+</div>
+</div>
 <p>如上所示, 会让make陷入无限的变量展开过程中, 报错. 故可使用下面的<code>:=</code></p></li>
 
 <li><p>变量以<code>$(objects)</code>取值
@@ -251,10 +232,14 @@ B = $(A)
 <code>=</code>有可能导致递归定义, 故使用该表达式, 前面的变量不使用后面的变量, 只使用已经定义好的变量</p></li>
 
 <li><p>变量以<code>?=</code>定义</p>
-
-<pre><code>foo ?= bar
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">foo ?= bar</pre></td></tr></table>
+</div>
+</div>
 <p>如果foo没有被定义过, 那么变量foo的值是bar, 否则, 这条语句什么也不做.</p></li>
 
 <li><p>追加变量<code>+=</code>
@@ -262,15 +247,25 @@ B = $(A)
 
 <li><p><code>override</code>指示符变量
 用<code>override</code>指示符的变量, 在make命令行参数中可以设置, 而Makefile中对这个变量的赋值会被忽略</p>
-
-<pre><code>override &lt;varriable&gt; = &lt;value&gt;
-override &lt;varriable&gt; := &lt;value&gt;
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">override &lt;varriable&gt; = &lt;value&gt;
+override &lt;varriable&gt; := &lt;value&gt;</pre></td></tr></table>
+</div>
+</div>
 <p>追加,</p>
-
-<pre><code>override &lt;variable&gt; += &lt;more value&gt;
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">override &lt;variable&gt; += &lt;more value&gt;</pre></td></tr></table>
+</div>
+</div></li>
 
 <li><p>多行变量
 <code>define</code>指示符后面跟的是变量名称, 而重起一行定义变量的值, 变量可以换行, 定义以<code>endef</code>关键字结束. 变量的值可以包含函数,命令,文字或者其他变量</p></li>
@@ -288,59 +283,110 @@ Makefile 中定义的变量</p></li>
 <li><p>变量值的替换
 替换变量中的共有部分, 格式为<code>$(var:a=b)</code>或者<code>${var:a=b}</code>, 把var中所有以结尾的字串替换成以b结尾
 如下</p>
-
-<pre><code>foo := a.o b.o c.o
-bar := $(foo:.o=.c)
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">foo := a.o b.o c.o
+bar := $(foo:.o=.c)</pre></td></tr></table>
+</div>
+</div>
 <p>定义了\${foo}变量,把\${foo}中所有以.o结尾的子串全部替换为以.c结尾,$(bar)的值是a.c b.c c.c</p></li>
 
 <li><p>把变量值再再当成变量</p>
-
-<pre><code>x = y
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">x = y
 y = z
-a := $($(x))
-</code></pre>
-
+a := $($(x))</pre></td></tr></table>
+</div>
+</div>
 <p>如上, \$(x)的值是y, \$(\$(x))就是\$(y), 那\$(a)就是z</p></li>
 </ul>
 
 <h2 id="依赖规则">依赖规则</h2>
 
 <h3 id="规则语法">规则语法</h3>
-
-<pre><code>targets : prerequisites
-    command
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">targets : prerequisites
+    command</pre></td></tr></table>
+</div>
+</div>
 <p>targes是文件名, 以空格分开, 可以使用通配符. 目标可以是一个文件, 也可能是多个文件.</p>
 
 <p>command是命令行, 如果不与<code>targets : prerequisites</code>一行, 必须以[Tagb键]开头, 如果在一行, 可用<code>;</code>分割, 如下</p>
-
-<pre><code>targets : prerequisites ; command
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">targets : prerequisites ; command</pre></td></tr></table>
+</div>
+</div>
 <p>prerequisites是目标所依赖的文件(或者依赖目标), 如果有一个以上的文件比 target 文件要新的话,command 所定义的命令就会被执行</p>
 
 <h3 id="伪目标">伪目标</h3>
 
 <p>伪目标的规则类似上面的规则, 但是伪目标不是文件, 只是一个标签, 所以make无法生成它的依赖关系和决定它是否执行, 只有通过显示指定这个目标才能让其生效.
 比如, <code>make clean</code>科学可以执行下面的命令.</p>
-
-<pre><code>clean :
-    rm *.o temp
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">clean :
+    rm *.o temp</pre></td></tr></table>
+</div>
+</div>
 <p>为了避免和文件重命的情况, 使用特殊的额标记<code>.PHONY</code>来显示的指明一个伪目标, 不管是否有同名文件</p>
-
-<pre><code>.PHONY : clean
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.PHONY : clean
 clean : 
-    rm *.o temp
-</code></pre>
-
+    rm *.o temp</pre></td></tr></table>
+</div>
+</div>
 <p>伪目标没有依赖文件 ,但是可以为伪目标指定所依赖的文件. <strong>伪目标</strong>可以作为<strong>默认目标</strong></p>
-
-<pre><code>.PHONY : all cleanall cleanobj
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">.PHONY : all cleanall cleanobj
 all : prog1 prog2
 
 prog1 : prog1.o utils.o
@@ -356,9 +402,9 @@ cleanobj :
     rm *.o
 
 dleandiff : 
-    rm *.diff
-</code></pre>
-
+    rm *.diff</pre></td></tr></table>
+</div>
+</div>
 <p>Makefile中的第一目标会被当做默认目标. <code>all</code>伪目标依赖于其他的三个目标</p>
 
 <p>目标和伪目标都可以成为依赖.</p>
@@ -368,19 +414,29 @@ dleandiff :
 <h3 id="多目标">多目标</h3>
 
 <p>Makefile的规则中的目标可以不止一个,  其支持多目标. 当让, 有自动化变量<code>$@</code>吧表示目标的集合, 依次取出目标, 并执行命令.如下</p>
-
-<pre><code>bigoutput littleoutput : text.g
-generate text.g $@ &gt; $@
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">bigoutput littleoutput : text.g
+generate text.g $@ &gt; $@</pre></td></tr></table>
+</div>
+</div>
 <h3 id="静态模式定义的多目标">静态模式定义的多目标</h3>
 
 <p>语法如下</p>
-
-<pre><code>&lt;targets...&gt; : &lt;target-pattern&gt; : &lt;prereq-pattern&gt;
-&lt;commmands&gt;
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;targets...&gt; : &lt;target-pattern&gt; : &lt;prereq-pattern&gt;
+&lt;commmands&gt;</pre></td></tr></table>
+</div>
+</div>
 <ul>
 <li>targets 定义了一系列目标, 可以有通配符, 是目标的一个集合</li>
 <li>targets-pattern 指明了目标集模式, 从目标集中选出一部分目标</li>
@@ -388,13 +444,20 @@ generate text.g $@ &gt; $@
 </ul>
 
 <p>For example.</p>
-
-<pre><code>objects = foo.o bar.o
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">objects = foo.o bar.o
 all : $(objects)
 $(objects) : %.o : %.c
-$(CC) -c $&lt; -o $@
-</code></pre>
-
+$(CC) -c $&lt; -o $@</pre></td></tr></table>
+</div>
+</div>
 <p>从目标集<code>foo.o bar.o</code>中通过<code>%.o</code>的目标集模式选出之后, 通过<code>%.c</code>进行二次定义.
 - <code>%&lt;</code>自动化变量, 表示所有的依赖目标, 用<code>%c</code>表示
 - <code>%@</code>表示目标集, 即<code>%.o</code></p>
@@ -415,10 +478,14 @@ $(CC) -c $&lt; -o $@
 <h3 id="vpath-大写-变量指定搜索目录">VPATH(大写)变量指定搜索目录</h3>
 
 <p>make默认在当前目录搜索文件, 然后再到<code>VPATH</code>指定的目录去搜索.</p>
-
-<pre><code>VPATH = src:../headers
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">VPATH = src:../headers</pre></td></tr></table>
+</div>
+</div>
 <p>上面的定义指定两个目录,, 用<code>:</code>分割,  &ldquo;src&rdquo;和&rdquo;../headers&rdquo;, make按照这个顺序进行搜索, 当然, 当前目录是最高优先级.</p>
 
 <h3 id="vpath-小写-关键字设定搜索规则和路径">vpath(小写)关键字设定搜索规则和路径</h3>
@@ -436,12 +503,18 @@ $(CC) -c $&lt; -o $@
 </ul>
 
 <p><strong><code>vpath</code>使用的&lt;pattern&gt;中需要包含<code>%</code>字符, 表示匹配零或者若干字符</strong></p>
-
-<pre><code>vpath %c foo:bar
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">vpath %c foo:bar
 vpath %c usr
-vpath % blish
-</code></pre>
-
+vpath % blish</pre></td></tr></table>
+</div>
+</div>
 <p>上面的语句表示<code>.c</code>结尾的文件, 依次搜索&rdquo;foo&rdquo;, &ldquo;bar&rdquo;, &ldquo;user&rdquo;, &ldquo;blish&rdquo;目录</p>
 
 <h2 id="条件判断">条件判断</h2>
@@ -450,12 +523,20 @@ vpath % blish
 
 <ul>
 <li><p><code>ifeq</code>, 比较参数arg1和arg2是否相同,相同则为真</p>
-
-<pre><code>ifeq '&lt;arg1&gt;' '&lt;arg2&gt;'
-ifeq &quot;&lt;arg1&gt;&quot; &quot;&lt;arg2&gt;&quot;
-ifeq '&lt;arg1&gt;' &quot;&lt;arg2&gt;&quot;
-ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
-</code></pre></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ifeq &#39;&lt;arg1&gt;&#39; &#39;&lt;arg2&gt;&#39;
+ifeq &#34;&lt;arg1&gt;&#34; &#34;&lt;arg2&gt;&#34;
+ifeq &#39;&lt;arg1&gt;&#39; &#34;&lt;arg2&gt;&#34;
+ifeq &#34;&lt;arg1&gt;&#34; &#39;&lt;arg2&gt;&#39;</pre></td></tr></table>
+</div>
+</div></li>
 
 <li><p><code>ifneq</code>是否相同, 不同则为真</p></li>
 
@@ -465,10 +546,14 @@ ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
 <h2 id="函数">函数</h2>
 
 <p>函数调用以<code>$</code>开头, 以圆括号或花括号把函数名和参数括起.参数以<code>,</code>分隔, 函数名和参数之间以空格分隔;</p>
-
-<pre><code>$(&lt;function&gt; &lt;arguments1,arguments2&gt;) #小括号可换为大括号
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$(&lt;function&gt; &lt;arguments1,arguments2&gt;) #小括号可换为大括号</pre></td></tr></table>
+</div>
+</div>
 <h3 id="常用的字符串处理函数">常用的字符串处理函数</h3>
 
 <ul>
@@ -502,18 +587,29 @@ ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
 <h2 id="makefile与vim">Makefile与vim</h2>
 
 <p>vim内置了<code>autocmd</code>, 所以可以使用<code>:make</code>, make当前目录<code>:pwd</code>下的Makefile</p>
-
-<pre><code>:make           #执行当前目录下的Makefile
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">:make           #执行当前目录下的Makefile</pre></td></tr></table>
+</div>
+</div>
 <p>Use the following commands to examine the compile errors with vim</p>
-
-<pre><code>:copen          #open a mini-window with list of errors, hit enter on an error to jump to line
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">:copen          #open a mini-window with list of errors, hit enter on an error to jump to line
 :cclose         #close the mini-window
 :cn[ext]          #jump to the next errror
-:cp[revious]
-</code></pre>
-
+:cp[revious]</pre></td></tr></table>
+</div>
+</div>
 <p>具体用法, 可以在vim下<code>:h copen</code>和<code>:h cnext</code></p>
 
 <h2 id="makefile经验总结">Makefile经验总结</h2>
@@ -528,68 +624,64 @@ ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
 
     </div>
 
-    
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">QFQ</span>
+    <span class="item-title"></span>
+    <span class="item-content">tainzhi</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2018-07-23</span>
+    <span class="item-title"></span>
+    <span class="item-content">
+        2018-07-23
+        
+    </span>
   </p>
-  
+  <p class="copyright-item">
+      <span class="item-title"></span>
+      <span class="item-content"><a class="link-to-markdown" href="https://tainzhi.github.io/post/makefile-note/index.md" target="_blank"></a></span>
+    </p>
   
 </div>
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/makefile/">makefile</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/android%E4%BD%BF%E7%94%A8ffmpeg/">
+        <a class="prev" href="/post/android%E4%BD%BF%E7%94%A8ffmpeg/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Android使用ffmpeg</span>
-            <span class="prev-text nav-mobile">上一篇</span>
+            <span class="prev-text nav-mobile"></span>
           </a>
-        
-          <a class="next" href="/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/">
+        <a class="next" href="/post/%E6%88%91%E7%9A%84android%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/">
             <span class="next-text nav-default">我的android视频播放器</span>
-            <span class="next-text nav-mobile">下一篇</span>
+            <span class="next-text nav-mobile"></span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
     </footer>
   </article>
         </div>
-        
-  <div id="comments-gitment"></div>
-  <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
-    <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
-  <script type="text/javascript">
-  const gitment = new Gitment({
-    id: '2018-07-20 13:00:46 \x2b0800 \x2b0800',
-    title: 'Makefile笔记',
-    link: decodeURI(location.href),
-    desc: '命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 make -f make.some 变量',
-    owner: 'tainzhi',
-    repo: 'tainzhi.github.io',
-    oauth: {
-      client_id: '787f218ec49a286fa9e0',
-      client_secret: '97d3a6646c5b508dc2a2eae1b5bcfde455289e14'
-    }
-  })
-  gitment.render('comments-gitment')
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+        <div id="comments-gitment"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitment = new Gitment({
+        id: '2018-07-20 13:00:46 \x2b0800 CST',
+        title: 'Makefile笔记',
+        link: decodeURI(location.href),
+        desc: '命名 文件保存以Makefile或makefile为名.当在当前目录下直接输入make即可执行 如果不是默认的文件名, 可以使用-f参数 1 make -f make.some 变',
+        owner: 'tainzhi',
+        repo: 'tainzhi.github.io',
+        oauth: {
+          client_id: '787f218ec49a286fa9e0',
+          client_secret: '97d3a6646c5b508dc2a2eae1b5bcfde455289e14'
+        }
+      });
+      gitment.render('comments-gitment');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  
+  
 
   
 
@@ -600,34 +692,35 @@ ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
       <div class="social-links">
       <a href="mailto:qfq61@qq.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/tainzhi" class="iconfont icon-github" title="github"></a>
-  <a href="http://qfq.coding.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://tainzhi.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    主题 - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
-  
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> %!(EXTRA string=<span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> %!(EXTRA string=<span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
+  </div>
 
   <span class="copyright-year">
     &copy; 
-    
-      2017 - 
-    2018
+    2016 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">QFQ</span>
+    <span class="author">tainzhi</span>
   </span>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274354309'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274354309%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
-
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -635,52 +728,41 @@ ifeq &quot;&lt;arg1&gt;&quot; '&lt;arg2&gt;'
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh_cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-123043335-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?b640efe02c0f246246019dbd09d35a86";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
 
-<script src="https://s19.cnzz.com/z_stat.php?id=1274354309&web_id=1274354309" language="JavaScript"></script>
 
-<script id="baidu_push">
-  (function(){
-    if (window.location.hostname === 'localhost') return;
-    var bp = document.createElement('script'); bp.async = true;
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-  })();
-</script>
+
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh_cn">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,69 +16,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="QFQ" />
-  <meta name="description" content="ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="tainzhi" /><meta name="description" content="ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一" />
 
 
-<meta name="baidu-site-verification" content="s8Pe1TBqyy" />
-<meta name="google-site-verification" content="Mds1Bl3bztUHFVhTKV2fA3TJJjWSDM3S_2j4Igv8G90" />
 
 
-<meta name="generator" content="Hugo 0.45.1" />
 
 
-<link rel="canonical" href="http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/" />
+<meta name="generator" content="Hugo 0.56.0 with even 4.0.0" />
 
+
+<link rel="canonical" href="https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#2b5797">
-<meta name="theme-color" content="#ffffff">
 
-
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Android使用ffmpeg" />
 <meta property="og:description" content="ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/" />
-
-
-
-<meta property="article:published_time" content="2018-07-20T13:03:45&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-07-20T13:03:45&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/" />
+<meta property="article:published_time" content="2018-07-20T13:03:45+08:00" />
+<meta property="article:modified_time" content="2018-07-20T13:03:45+08:00" />
 <meta itemprop="name" content="Android使用ffmpeg">
 <meta itemprop="description" content="ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一">
 
 
 <meta itemprop="datePublished" content="2018-07-20T13:03:45&#43;08:00" />
 <meta itemprop="dateModified" content="2018-07-20T13:03:45&#43;08:00" />
-<meta itemprop="wordCount" content="1315">
+<meta itemprop="wordCount" content="1328">
 
 
 
@@ -157,20 +129,16 @@
       <div class="post-meta">
         <span class="post-time"> 2018-07-20 </span>
         <div class="post-category">
-            
-              <a href="/categories/android/"> android </a>
-            
-          </div>
-        
-        
+            <a href="/categories/android/"> android </a>
+            </div>
+          <span class="more-meta">  </span>
+          <span class="more-meta">  </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> %!(EXTRA string=<span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
       </div>
     </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
@@ -204,11 +172,11 @@
 </nav>
   </div>
 </div>
-
-    
-    
-
-    
+  <div class="post-outdated">
+    <div class="hint">
+      <p><span class="timeago" datetime="2018-07-20T13:03:45" title="July 20, 2018">July 20, 2018</span></p>
+    </div>
+  </div>
     <div class="post-content">
       
 
@@ -225,10 +193,14 @@
   ffmpeg 2.6.2<br></p>
 
 <h2 id="获取代码">获取代码</h2>
-
-<pre><code>git clone https://github.com/tainzhi/ffmpeg-for-android-shared-library
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git clone https://github.com/tainzhi/ffmpeg-for-android-shared-library</pre></td></tr></table>
+</div>
+</div>
 <h2 id="使用">使用</h2>
 
 <h3 id="step-1">Step 1</h3>
@@ -251,35 +223,56 @@
 将<code>source/build_android_arm.sh</code>复制到<code>ffmpeg</code>目录下</p>
 
 <h5 id="1-指定临时目录">1.指定临时目录</h5>
-
-<pre><code>export TMPDIR=/tmp
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">export TMPDIR=/tmp</pre></td></tr></table>
+</div>
+</div>
 <p>指定一个临时目录，可以是任何路径，但必须保证存在，ffmpeg编译要用；<br></p>
 
 <h5 id="2-指定ndk路径">2.指定NDK路径</h5>
-
-<pre><code>NDK=~/Android/Sdk/ndk-build
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">NDK=~/Android/Sdk/ndk-build</pre></td></tr></table>
+</div>
+</div>
 <h5 id="3-指定使用ndk-platform版本">3.指定使用NDK Platform版本</h5>
-
-<pre><code>SYSROOT=$NDK/platforms/android-21/arch-arm/
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">SYSROOT=$NDK/platforms/android-21/arch-arm/</pre></td></tr></table>
+</div>
+</div>
 <p>这里指定的ndk platform的路径，一定要<code>选择比你的目标机器使用的版本低的</code>，比如你的手机是android-21版本，那么就选择低于21的<br></p>
 
 <h5 id="4-指定编译工具链">4.指定编译工具链</h5>
-
-<pre><code>TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64</pre></td></tr></table>
+</div>
+</div>
 <h5 id="5-指定编译后的安装目录">5.指定编译后的安装目录</h5>
-
-<pre><code>CPU=arm
-PREFIX=$(pwd)/android/$CPU
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">CPU=arm
+PREFIX=$(pwd)/android/$CPU</pre></td></tr></table>
+</div>
+</div>
 <p>显然，生成的文件在<code>source/ffmpeg/android/arm/</code>目录下</p>
 
 <p>这个目录是ffmpeg编译后的so的输出目录，会有一个include和lib文件夹生成在这里，这也是我们之后要在android apk中使用的.<br></p>
@@ -303,12 +296,18 @@ PREFIX=$(pwd)/android/$CPU
 <p>具体查看ffmpeg文档.</p>
 
 <h3 id="step-3">Step 3</h3>
-
-<pre><code>cp source/build_android_arm.sh source/ffmpeg/
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">cp source/build_android_arm.sh source/ffmpeg/
 cd source/ffmpeg
-./build_andrioid_arm.sh
-</code></pre>
-
+./build_andrioid_arm.sh</pre></td></tr></table>
+</div>
+</div>
 <h3 id="step-4编译出现错误">Step 4编译出现错误</h3>
 
 <p>如果编译过程中出现错误，错误信息会输出在<code>source/ffmpeg/config.log</code>文件中，一般在文件末尾.仔细分析该文件，可以找到编译出错的原因</p>
@@ -320,12 +319,18 @@ cd source/ffmpeg
 <h3 id="step6-重新configure-compile">Step6 重新configure&amp;&amp;compile</h3>
 
 <p>修改了<code>build_android_arm.sh</code>文件，发现参数没有起作用，原来没有清除之前configure生成的文件.这个命令，值得拥有</p>
-
-<pre><code>make distclean      #delete files created by configure
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">make distclean      #delete files created by configure
 #then
-. ./build_android_arm.sh
-</code></pre>
-
+. ./build_android_arm.sh</pre></td></tr></table>
+</div>
+</div>
 <h2 id="reference-thanks">Reference &amp; Thanks</h2>
 
 <ul>
@@ -334,72 +339,66 @@ cd source/ffmpeg
 
     </div>
 
-    
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">QFQ</span>
+    <span class="item-title"></span>
+    <span class="item-content">tainzhi</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2018-07-20</span>
+    <span class="item-title"></span>
+    <span class="item-content">
+        2018-07-20
+        
+    </span>
   </p>
-  
+  <p class="copyright-item">
+      <span class="item-title"></span>
+      <span class="item-content"><a class="link-to-markdown" href="https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/index.md" target="_blank"></a></span>
+    </p>
   
 </div>
-
-    
-    
-
-    <footer class="post-footer">
+<footer class="post-footer">
       <div class="post-tags">
-          
           <a href="/tags/android/">android</a>
-          
           <a href="/tags/ffmpeg/">ffmpeg</a>
-          
           <a href="/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a>
-          
-        </div>
-
-      
+          </div>
       <nav class="post-nav">
-        
-          <a class="prev" href="/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/">
+        <a class="prev" href="/post/git-hooks%E9%98%B2%E6%AD%A2%E6%8A%8A%E4%B8%AA%E4%BA%BA%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E4%B8%8A%E4%BC%A0%E5%88%B0github/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">git hooks防止把个人密码信息上传到github</span>
-            <span class="prev-text nav-mobile">上一篇</span>
+            <span class="prev-text nav-mobile"></span>
           </a>
-        
-          <a class="next" href="/post/makefile-note/">
+        <a class="next" href="/post/makefile-note/">
             <span class="next-text nav-default">Makefile笔记</span>
-            <span class="next-text nav-mobile">下一篇</span>
+            <span class="next-text nav-mobile"></span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
     </footer>
   </article>
         </div>
-        
-  <div id="comments-gitment"></div>
-  <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
-    <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
-  <script type="text/javascript">
-  const gitment = new Gitment({
-    id: '2018-07-20 13:03:45 \x2b0800 \x2b0800',
-    title: 'Android使用ffmpeg',
-    link: decodeURI(location.href),
-    desc: 'ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一',
-    owner: 'tainzhi',
-    repo: 'tainzhi.github.io',
-    oauth: {
-      client_id: '787f218ec49a286fa9e0',
-      client_secret: '97d3a6646c5b508dc2a2eae1b5bcfde455289e14'
-    }
-  })
-  gitment.render('comments-gitment')
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+        <div id="comments-gitment"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitment = new Gitment({
+        id: '2018-07-20 13:03:45 \x2b0800 CST',
+        title: 'Android使用ffmpeg',
+        link: decodeURI(location.href),
+        desc: 'ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一',
+        owner: 'tainzhi',
+        repo: 'tainzhi.github.io',
+        oauth: {
+          client_id: '787f218ec49a286fa9e0',
+          client_secret: '97d3a6646c5b508dc2a2eae1b5bcfde455289e14'
+        }
+      });
+      gitment.render('comments-gitment');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  
+  
 
   
 
@@ -410,34 +409,35 @@ cd source/ffmpeg
       <div class="social-links">
       <a href="mailto:qfq61@qq.com" class="iconfont icon-email" title="email"></a>
       <a href="https://github.com/tainzhi" class="iconfont icon-github" title="github"></a>
-  <a href="http://qfq.coding.me/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://tainzhi.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    主题 - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
-  
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> %!(EXTRA string=<span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> %!(EXTRA string=<span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>) </span>
+  </div>
 
   <span class="copyright-year">
     &copy; 
-    
-      2017 - 
-    2018
+    2016 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">QFQ</span>
+    <span class="author">tainzhi</span>
   </span>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274354309'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1274354309%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
-
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -445,52 +445,41 @@ cd source/ffmpeg
     </div>
   </div>
   
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh_cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-
-
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-123043335-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script id="baidu_analytics">
-  var _hmt = _hmt || [];
-  (function() {
-    if (window.location.hostname === 'localhost') return;
-    var hm = document.createElement("script"); hm.async = true;
-    hm.src = "https://hm.baidu.com/hm.js?b640efe02c0f246246019dbd09d35a86";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
 
-<script src="https://s19.cnzz.com/z_stat.php?id=1274354309&web_id=1274354309" language="JavaScript"></script>
 
-<script id="baidu_push">
-  (function(){
-    if (window.location.hostname === 'localhost') return;
-    var bp = document.createElement('script'); bp.async = true;
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-  })();
-</script>
+
 
 
 

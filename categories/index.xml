@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on QFQ的博客</title>
-    <link>http://qfq.coding.me/categories/</link>
+    <link>https://tainzhi.github.io/categories/</link>
     <description>Recent content in Categories on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_cn</language>
     <lastBuildDate>Sat, 27 Jul 2019 23:37:04 +0800</lastBuildDate>
     
-	<atom:link href="http://qfq.coding.me/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tainzhi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>vim</title>
-      <link>http://qfq.coding.me/categories/vim/</link>
+      <link>https://tainzhi.github.io/categories/vim/</link>
       <pubDate>Sat, 27 Jul 2019 23:37:04 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/categories/vim/</guid>
+      <guid>https://tainzhi.github.io/categories/vim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>http://qfq.coding.me/categories/blog/</link>
+      <link>https://tainzhi.github.io/categories/blog/</link>
       <pubDate>Sun, 29 Jul 2018 16:05:50 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/categories/blog/</guid>
+      <guid>https://tainzhi.github.io/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>http://qfq.coding.me/categories/linux/</link>
+      <link>https://tainzhi.github.io/categories/linux/</link>
       <pubDate>Sun, 29 Jul 2018 10:14:31 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/categories/linux/</guid>
+      <guid>https://tainzhi.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://qfq.coding.me/categories/git/</link>
+      <link>https://tainzhi.github.io/categories/git/</link>
       <pubDate>Fri, 20 Jul 2018 13:03:50 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/categories/git/</guid>
+      <guid>https://tainzhi.github.io/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>android</title>
-      <link>http://qfq.coding.me/categories/android/</link>
+      <link>https://tainzhi.github.io/categories/android/</link>
       <pubDate>Fri, 20 Jul 2018 13:03:45 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/categories/android/</guid>
+      <guid>https://tainzhi.github.io/categories/android/</guid>
       <description></description>
     </item>
     

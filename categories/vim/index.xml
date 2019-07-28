@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vim on QFQ的博客</title>
-    <link>http://qfq.coding.me/categories/vim/</link>
+    <link>https://tainzhi.github.io/categories/vim/</link>
     <description>Recent content in vim on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_cn</language>
     <lastBuildDate>Sat, 27 Jul 2019 23:37:04 +0800</lastBuildDate>
     
-	<atom:link href="http://qfq.coding.me/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tainzhi.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About_vim</title>
-      <link>http://qfq.coding.me/posts/about_vim/</link>
+      <link>https://tainzhi.github.io/post/about_vim/</link>
       <pubDate>Sat, 27 Jul 2019 23:37:04 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/posts/about_vim/</guid>
+      <guid>https://tainzhi.github.io/post/about_vim/</guid>
       <description>简单谈谈vim使用过程的坑和爽点 vim使用有几年了，从最开始不会使用各种懵逼，到输入第一个字符，再到能简单的插入删除复制粘贴，再到自定义一些</description>
     </item>
     

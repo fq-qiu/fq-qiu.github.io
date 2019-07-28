@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ffmpeg on QFQ的博客</title>
-    <link>http://qfq.coding.me/tags/ffmpeg/</link>
+    <link>https://tainzhi.github.io/tags/ffmpeg/</link>
     <description>Recent content in ffmpeg on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_cn</language>
     <lastBuildDate>Fri, 20 Jul 2018 13:03:45 +0800</lastBuildDate>
     
-	<atom:link href="http://qfq.coding.me/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tainzhi.github.io/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android使用ffmpeg</title>
-      <link>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</link>
+      <link>https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/</link>
       <pubDate>Fri, 20 Jul 2018 13:03:45 +0800</pubDate>
       
-      <guid>http://qfq.coding.me/post/android%E4%BD%BF%E7%94%A8ffmpeg/</guid>
+      <guid>https://tainzhi.github.io/post/android%E4%BD%BF%E7%94%A8ffmpeg/</guid>
       <description>ffmpeg for android shared library This comes from my github README 移植ffmpeg到android，编译可用于jni调用的so库. 编译出的so在android apk中的使用参考我的另一</description>
     </item>
     
