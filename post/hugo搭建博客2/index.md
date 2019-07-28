@@ -15,6 +15,8 @@
 ## Travis.ci注册与使用
 [Travis.ci]( https://www.travis-ci.org/ )用github账号注册。注册后，会看到自己github上的仓库列表，选择hugo-blog并打开。在[github token](https://github.com/settings/tokens)网站生成tokens，复制到刚才Travis.ci上hugo-blog对应的设置中的环境变量，命名为`GithubToken`。同理，在[coding.net](https://coding.net/user/account/setting/tokens)上生成token拷贝到环境变量，命名为`CodingNetToken`
 
+**注意**: Token是有使用期限的, 一年后就会过期, 需要重新申请token
+
 
 ## 自动部署到github pages
 在hugo-blog中需要添加一个配置文件`.travis.yml`, 配置内容如下

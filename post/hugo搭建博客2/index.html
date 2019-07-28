@@ -43,14 +43,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/" />
 <meta property="article:published_time" content="2018-07-29T16:05:50+08:00" />
-<meta property="article:modified_time" content="2019-07-28T13:39:45+00:00" />
+<meta property="article:modified_time" content="2019-07-28T13:48:06+00:00" />
 <meta itemprop="name" content="Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages">
 <meta itemprop="description" content="写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署">
 
 
 <meta itemprop="datePublished" content="2018-07-29T16:05:50&#43;08:00" />
-<meta itemprop="dateModified" content="2019-07-28T13:39:45&#43;00:00" />
-<meta itemprop="wordCount" content="1067">
+<meta itemprop="dateModified" content="2019-07-28T13:48:06&#43;00:00" />
+<meta itemprop="wordCount" content="1102">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/blog/"> blog </a>
             </div>
-          <span class="more-meta"> 约 1067 字 </span>
+          <span class="more-meta"> 约 1102 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -178,6 +178,8 @@
 <h2 id="travis-ci注册与使用">Travis.ci注册与使用</h2>
 
 <p><a href="https://www.travis-ci.org/">Travis.ci</a>用github账号注册。注册后，会看到自己github上的仓库列表，选择hugo-blog并打开。在<a href="https://github.com/settings/tokens">github token</a>网站生成tokens，复制到刚才Travis.ci上hugo-blog对应的设置中的环境变量，命名为<code>GithubToken</code>。同理，在<a href="https://coding.net/user/account/setting/tokens">coding.net</a>上生成token拷贝到环境变量，命名为<code>CodingNetToken</code></p>
+
+<p><strong>注意</strong>: Token是有使用期限的, 一年后就会过期, 需要重新申请token</p>
 
 <h2 id="自动部署到github-pages">自动部署到github pages</h2>
 
