@@ -6,7 +6,7 @@
     <description>Recent content on QFQ的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 27 Jul 2019 23:37:04 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 14:42:18 +0800</lastBuildDate>
     
 	<atom:link href="https://tainzhi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://tainzhi.github.io/about/</guid>
       <description>This is QFQ&amp;rsquo;s blog. [Todo] 完善我的个人信息</description>
+    </item>
+    
+    <item>
+      <title>AndroidStudio使用Library</title>
+      <link>https://tainzhi.github.io/post/android_library/</link>
+      <pubDate>Wed, 31 Jul 2019 14:42:18 +0800</pubDate>
+      
+      <guid>https://tainzhi.github.io/post/android_library/</guid>
+      <description>android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行</description>
     </item>
     
     <item>

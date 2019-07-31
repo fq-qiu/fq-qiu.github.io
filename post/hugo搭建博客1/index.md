@@ -33,6 +33,12 @@ hugo new post/first-post.md
 hugo server -D
 ```
 默认地址为`http://localhost:1313`，使用浏览器访问
+
+## hugo-theme-even主题自定义
+
+- 替换favicon.ico. 目录在`even/static/`
+- 替换自己的微信和支付宝二维码. 目录在`even/stati/img/reward/`.
+- 在`blog/config.toml`中修改路径为`/img/reward/alipay.png`. `/img`表示在网站的根目录下的img目录下
  
  
 ## 把博客地址加入搜索引擎
