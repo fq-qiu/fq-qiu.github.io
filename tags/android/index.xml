@@ -17,7 +17,7 @@
       <pubDate>Wed, 31 Jul 2019 14:42:18 +0800</pubDate>
       
       <guid>https://tainzhi.github.io/post/android_library/</guid>
-      <description>android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行</description>
+      <description>android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行</description>
     </item>
     
     <item>

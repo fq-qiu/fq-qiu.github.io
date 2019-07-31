@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="tainzhi" /><meta name="description" content="android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
+<meta name="author" content="tainzhi" /><meta name="description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="AndroidStudio使用Library" />
-<meta property="og:description" content="android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
+<meta property="og:description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tainzhi.github.io/post/android_library/" />
 <meta property="article:published_time" content="2019-07-31T14:42:18+08:00" />
-<meta property="article:modified_time" content="2019-07-31T19:48:09+00:00" />
+<meta property="article:modified_time" content="2019-07-31T19:52:26+00:00" />
 <meta itemprop="name" content="AndroidStudio使用Library">
-<meta itemprop="description" content="android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行">
+<meta itemprop="description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行">
 
 
 <meta itemprop="datePublished" content="2019-07-31T14:42:18&#43;08:00" />
-<meta itemprop="dateModified" content="2019-07-31T19:48:09&#43;00:00" />
-<meta itemprop="wordCount" content="805">
+<meta itemprop="dateModified" content="2019-07-31T19:52:26&#43;00:00" />
+<meta itemprop="wordCount" content="845">
 
 
 
 <meta itemprop="keywords" content="android," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AndroidStudio使用Library"/>
-<meta name="twitter:description" content="android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行"/>
+<meta name="twitter:description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/android/"> android </a>
             </div>
-          <span class="more-meta"> 约 805 字 </span>
+          <span class="more-meta"> 约 845 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
@@ -149,6 +149,7 @@
 <ul>
 <li><a href="#添加library-jar到项目依赖中">添加library/jar到项目依赖中</a></li>
 <li><a href="#在项目根目录的手动添加">在项目根目录的手动添加</a></li>
+<li><a href="#在使用library的module的-build-gradle-添加">在使用library的module的<code>build.gradle</code>添加</a></li>
 </ul></li>
 <li><a href="#convert-an-app-module-to-an-library-module">convert an app module to an library module</a></li>
 <li><a href="#组件化过程中遇到-黄油刀butterknife在library上的使用-元素值必须为常量表达式">组件化过程中遇到, 黄油刀butterknife在Library上的使用（元素值必须为常量表达式）</a>
@@ -170,7 +171,7 @@
 
 <h2 id="android-library">android library</h2>
 
-<p>android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行在设备上, 后者被编译成aar(Android Archive)文件, 作为其他app模块的依赖存在.</p>
+<p>android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行在设备上, 后者被编译成aar(Android Archive)文件, 作为其他app模块的依赖存在.</p>
 
 <p>不像java的包文件jar, jar只包含源码.</p>
 
@@ -193,6 +194,19 @@
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma">include &#39;:app&#39;, &#39;:my-library-module&#39;</pre></td></tr></table>
+</div>
+</div>
+<h3 id="在使用library的module的-build-gradle-添加">在使用library的module的<code>build.gradle</code>添加</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">dependencies {
+    implementation project(&#34;:my-library-module&#34;)
+}</pre></td></tr></table>
 </div>
 </div>
 <h2 id="convert-an-app-module-to-an-library-module">convert an app module to an library module</h2>
@@ -311,7 +325,7 @@ apply plugin: &#39;com.jakewharton.butterknife&#39;</pre></td></tr></table>
         id: '2019-07-31 14:42:18 \x2b0800 \x2b0800',
         title: 'AndroidStudio使用Library',
         link: decodeURI(location.href),
-        desc: 'android library android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行',
+        desc: 'android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行',
         owner: 'tainzhi',
         repo: 'tainzhi.github.io',
         oauth: {

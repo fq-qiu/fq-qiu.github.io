@@ -1,5 +1,5 @@
 ## android library
-android bibrary从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行在设备上, 后者被编译成aar(Android Archive)文件, 作为其他app模块的依赖存在.
+android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行在设备上, 后者被编译成aar(Android Archive)文件, 作为其他app模块的依赖存在.
 
 不像java的包文件jar, jar只包含源码.
 
@@ -15,6 +15,13 @@ File > New > New module选择要导入的library/jar
 在项目的根目录中`settings.gradle`. 
 ```
 include ':app', ':my-library-module'
+```
+
+### 在使用library的module的`build.gradle`添加
+```
+dependencies {
+    implementation project(":my-library-module")
+}
 ```
 
 ## convert an app module to an library module
