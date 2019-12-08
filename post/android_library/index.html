@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AndroidStudio使用Library - QFQ的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="tainzhi" /><meta name="description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.56.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://tainzhi.github.io/post/android_library/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="AndroidStudio使用Library" />
+<meta property="og:description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tainzhi.github.io/post/android_library/" />
+<meta property="article:published_time" content="2019-07-31T14:42:18+08:00" />
+<meta property="article:modified_time" content="2019-07-31T19:53:59+00:00" />
+<meta itemprop="name" content="AndroidStudio使用Library">
+<meta itemprop="description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行">
+
+
+<meta itemprop="datePublished" content="2019-07-31T14:42:18&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-31T19:53:59&#43;00:00" />
+<meta itemprop="wordCount" content="888">
+
+
+
+<meta itemprop="keywords" content="android," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AndroidStudio使用Library"/>
+<meta name="twitter:description" content="android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">QFQ的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">QFQ的博客</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">AndroidStudio使用Library</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-07-31 </span>
+        <div class="post-category">
+            <a href="/categories/android/"> android </a>
+            </div>
+          <span class="more-meta"> 约 888 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#android-library">android library</a></li>
+<li><a href="#创建library或者jar">创建library或者jar</a>
+<ul>
+<li><a href="#添加library-jar到项目依赖中">添加library/jar到项目依赖中</a></li>
+<li><a href="#在项目根目录的手动添加">在项目根目录的手动添加</a></li>
+<li><a href="#在使用library的module的-build-gradle-添加">在使用library的module的<code>build.gradle</code>添加</a></li>
+</ul></li>
+<li><a href="#convert-an-app-module-to-an-library-module">convert an app module to an library module</a></li>
+<li><a href="#组件化过程中遇到-黄油刀butterknife在library上的使用-元素值必须为常量表达式">组件化过程中遇到, 黄油刀butterknife在Library上的使用（元素值必须为常量表达式）</a>
+<ul>
+<li><a href="#1-在project-gradle中添加">1 在project gradle中添加</a></li>
+<li><a href="#2-在需要使用r2的module的gradle中添加">2 在需要使用R2的module的gradle中添加</a></li>
+<li><a href="#3-把整个项目中的-bindview-r-id-替换成-bindview-r2-id">3 把整个项目中的<code>BindView(R.id)</code>替换成<code>BindView(R2.id)</code></a></li>
+</ul></li>
+<li><a href="#批量解决butterknife组件化中r类问题">批量解决ButterKnife组件化中R类问题</a></li>
+<li><a href="#可能遇到的问题">可能遇到的问题</a>
+<ul>
+<li><a href="#cannot-access-xxx-class">cannot access xxx.class</a></li>
+</ul></li>
+<li><a href="#总结">总结</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="android-library">android library</h2>
+
+<p>android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行在设备上, 后者被编译成aar(Android Archive)文件, 作为其他app模块的依赖存在.</p>
+
+<p>不像java的包文件jar, jar只包含源码.</p>
+
+<p>aar和jar都可以作为app module的依赖包</p>
+
+<h2 id="创建library或者jar">创建library或者jar</h2>
+
+<p>从android studio进入, File &gt; New &gt; New Module &gt; Android Library/Java Library</p>
+
+<h3 id="添加library-jar到项目依赖中">添加library/jar到项目依赖中</h3>
+
+<p>File &gt; New &gt; New module选择要导入的library/jar</p>
+
+<h3 id="在项目根目录的手动添加">在项目根目录的手动添加</h3>
+
+<p>在项目的根目录中<code>settings.gradle</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">include &#39;:app&#39;, &#39;:my-library-module&#39;</pre></td></tr></table>
+</div>
+</div>
+<h3 id="在使用library的module的-build-gradle-添加">在使用library的module的<code>build.gradle</code>添加</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">dependencies {
+    implementation project(&#34;:my-library-module&#34;)
+}</pre></td></tr></table>
+</div>
+</div>
+<h2 id="convert-an-app-module-to-an-library-module">convert an app module to an library module</h2>
+
+<ul>
+<li>在项目的<code>build.gradle</code>中删除<code>applicationId</code>, 因为只有app module才有applicationId</li>
+<li>把build.gradle中的<code>apply plugin: 'com.android.application'</code>修改成<code>apply plugin: 'com.android.library'</code></li>
+<li>保存文件, 然后File &gt; Sync Project with Gradle Files</li>
+</ul>
+
+<h2 id="组件化过程中遇到-黄油刀butterknife在library上的使用-元素值必须为常量表达式">组件化过程中遇到, 黄油刀butterknife在Library上的使用（元素值必须为常量表达式）</h2>
+
+<p>原因是library中注解生成的R文件没有final表示, 导致无法识别.
+解决办法是把使用R2</p>
+
+<h3 id="1-在project-gradle中添加">1 在project gradle中添加</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">dependencies {
+    classpath &#39;com.neenbedankt.gradle.plugins:android-apt:1.8&#39;
+    classpath &#39;com.jakewharton:butterknife-gradle-plugin:8.6.0&#39;
+}</pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-在需要使用r2的module的gradle中添加">2 在需要使用R2的module的gradle中添加</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">apply plugin: &#39;com.android.library&#39;
+apply plugin: &#39;android-apt&#39;
+apply plugin: &#39;com.jakewharton.butterknife&#39;</pre></td></tr></table>
+</div>
+</div>
+<h3 id="3-把整个项目中的-bindview-r-id-替换成-bindview-r2-id">3 把整个项目中的<code>BindView(R.id)</code>替换成<code>BindView(R2.id)</code></h3>
+
+<h2 id="批量解决butterknife组件化中r类问题">批量解决ButterKnife组件化中R类问题</h2>
+
+<p>使用反射, 详见参考</p>
+
+<h2 id="可能遇到的问题">可能遇到的问题</h2>
+
+<h3 id="cannot-access-xxx-class">cannot access xxx.class</h3>
+
+<p>原因是没有指定某个library的依赖, 解决办法是</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">dependencies {
+    implementation project(&#34;:my-library-module&#34;)
+}</pre></td></tr></table>
+</div>
+</div>
+<h2 id="总结">总结</h2>
+
+<p>组件化开发中, ButterKnife使用R2.当然AndroidStudio也有相应的插件自动生成</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="https://developer.android.com/studio/projects/android-library">android developers: create an android library</a></li>
+<li><a href="https://www.jianshu.com/p/a101cec2c960">butterknife组件化开发l使用ibrary中R类问题的批量解决方案</a></li>
+<li><a href="https://www.cnblogs.com/slma/p/9359375.html">Android组件化aar躺坑记：ButterKnife 报 元素值必须为常量表达式错误</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">tainzhi</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-07-31
+        
+    </span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">原始文档</span>
+      <span class="item-content"><a class="link-to-markdown" href="https://tainzhi.github.io/post/android_library/index.md" target="_blank">查看本文 Markdown 版本 »</a></span>
+    </p>
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.png">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/android/">android</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/vimdiff_for_git_merge_conflict/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">vimdiff解决git merge冲突</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/about_vim/">
+            <span class="next-text nav-default">About_vim</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="comments-gitment"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitment = new Gitment({
+        id: '2019-07-31 14:42:18 \x2b0800 \x2b0800',
+        title: 'AndroidStudio使用Library',
+        link: decodeURI(location.href),
+        desc: 'android library android library从结构上来看和module没有区别, 都含有源码, 资源文件和android manifest文件. 不过前者被编译成apk运行',
+        owner: 'tainzhi',
+        repo: 'tainzhi.github.io',
+        oauth: {
+          client_id: '787f218ec49a286fa9e0',
+          client_secret: '97d3a6646c5b508dc2a2eae1b5bcfde455289e14'
+        }
+      });
+      gitment.render('comments-gitment');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:qfq61@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/tainzhi" class="iconfont icon-github" title="github"></a>
+  <a href="https://tainzhi.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">tainzhi</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "zh-cn".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123043335-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

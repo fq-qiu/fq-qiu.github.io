@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="https://tainzhi.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>https://tainzhi.github.io/about/</loc>
@@ -12,83 +11,60 @@
   <url>
     <loc>https://tainzhi.github.io/categories/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/categories/git/</loc>
-    <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/tags/git/</loc>
-    <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/post/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/tags/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tainzhi.github.io/categories/git/</loc>
+    <lastmod>2019-08-31T15:49:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tainzhi.github.io/tags/git/</loc>
+    <lastmod>2019-08-31T15:49:14+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/categories/vim/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/tags/vim/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/tags/vimdiff/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/post/vimdiff_for_git_merge_conflict/</loc>
     <lastmod>2019-08-31T15:49:14+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/categories/android/</loc>
-    <lastmod>2019-07-31T19:53:59+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/tags/android/</loc>
-    <lastmod>2019-07-31T19:53:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -101,22 +77,20 @@
   </url>
   
   <url>
+    <loc>https://tainzhi.github.io/categories/android/</loc>
+    <lastmod>2019-07-31T19:53:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tainzhi.github.io/tags/android/</loc>
+    <lastmod>2019-07-31T19:53:59+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tainzhi.github.io/post/about_vim/</loc>
     <lastmod>2019-07-28T13:44:57+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/categories/blog/</loc>
-    <lastmod>2019-07-28T14:48:05+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/tags/hugo/</loc>
-    <lastmod>2019-07-28T14:48:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -129,17 +103,27 @@
   </url>
   
   <url>
-    <loc>https://tainzhi.github.io/tags/linux/</loc>
-    <lastmod>2018-07-29T10:44:35+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://tainzhi.github.io/categories/blog/</loc>
+    <lastmod>2019-07-28T14:48:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tainzhi.github.io/tags/hugo/</loc>
+    <lastmod>2019-07-28T14:48:05+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/categories/linux/</loc>
     <lastmod>2018-07-29T10:44:35+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tainzhi.github.io/tags/linux/</loc>
+    <lastmod>2018-07-29T10:44:35+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -166,22 +150,13 @@
   <url>
     <loc>https://tainzhi.github.io/tags/ffmpeg/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tainzhi.github.io/tags/%E5%A4%9A%E5%AA%92%E4%BD%93/</loc>
     <lastmod>2018-07-20T13:03:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tainzhi.github.io/tags/makefile/</loc>
-    <lastmod>2018-07-23T10:18:06+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -192,10 +167,15 @@
   </url>
   
   <url>
+    <loc>https://tainzhi.github.io/tags/makefile/</loc>
+    <lastmod>2018-07-23T10:18:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tainzhi.github.io/tags/app/</loc>
     <lastmod>2018-07-20T12:50:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
