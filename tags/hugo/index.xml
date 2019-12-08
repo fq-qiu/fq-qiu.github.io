@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on QFQ的博客</title>
+    <link>https://tainzhi.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on QFQ的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Jul 2018 16:05:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://tainzhi.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo搭建博客&lt;二&gt;:使用Travis.ci自动部署到github pages和coding.net pages</title>
+      <link>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</link>
+      <pubDate>Sun, 29 Jul 2018 16:05:50 +0800</pubDate>
+      
+      <guid>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A22/</guid>
+      <description>写在前面 使用Hugo生成静态博客后，需要手动把内容上传到对应pages的仓库，这种操作全程手动。现在有Travis.ci，一个自动测试和部署</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建blog&lt;一&gt;: Hugo入门</title>
+      <link>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</link>
+      <pubDate>Fri, 20 Jul 2018 12:10:44 +0800</pubDate>
+      
+      <guid>https://tainzhi.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A21/</guid>
+      <description>我之前的静态博客生成器用过jekyll(基于ruby), pelican(基于python)和hexo(基于node.js)，到现在用hugo</description>
+    </item>
+    
+  </channel>
+</rss>

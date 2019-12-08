@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vimdiff on QFQ的博客</title>
+    <link>https://tainzhi.github.io/tags/vimdiff/</link>
+    <description>Recent content in vimdiff on QFQ的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Aug 2019 15:35:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://tainzhi.github.io/tags/vimdiff/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vimdiff解决git merge冲突</title>
+      <link>https://tainzhi.github.io/post/vimdiff_for_git_merge_conflict/</link>
+      <pubDate>Sat, 31 Aug 2019 15:35:53 +0800</pubDate>
+      
+      <guid>https://tainzhi.github.io/post/vimdiff_for_git_merge_conflict/</guid>
+      <description>写在前面：使用git merge，完美合并，皆大欢喜，若遇到冲突也不用呼天抢地。此时使用vimdiff这款强大的工具，解决conflict手到</description>
+    </item>
+    
+  </channel>
+</rss>
